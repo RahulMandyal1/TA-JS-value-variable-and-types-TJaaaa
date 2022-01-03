@@ -15,5 +15,19 @@ var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
 
-let completePhone = PHONE_PRICE+ACCESSORY_PRICE+TAX_RATE;
+// let completePhone = PHONE_PRICE+ACCESSORY_PRICE;
+// let total = completePhone*TAX_RATE;
+
+
+while(amount< bank_balance){   // 0< 303.91
+    amount= amount + PHONE_PRICE; // 0 = 0+99.99
+    if(amount<SPENDING_THRESHOLD){ // 99.99 < 200 
+        amount+=ACCESSORY_PRICE; // 99.99 + 9.99
+    }
+}
+let tax = amount*TAX_RATE;
+
+let total= `$${tax+amount}`;
+console.log(total);
+// let totalamount = ();
 // ⛑ Answer of the above will `$334.76`.
