@@ -49,23 +49,29 @@ for(let oddnum=0;oddnum<=9;oddnum= oddnum+1){
     }
 }
 
-5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
-let num= 5;
-while(num>=0){
-    console.log(num);
-    num=num - 1;
-
+// 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
+let finalString = "";
+let initialValue = 5;
+while(initialValue>=0){
+    finalString += initialValue;
+    initialValue--;
 }
+console.log(`${finalString}`);
 
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
 
-num = 10;
-while(num>=0){
-    if(num%2==0){
-        console.log(num);
+
+let finalEvenString = "";
+let initialEvenValue = 10;
+while(initialEvenValue>=0){
+    if(initialEvenValue%2==0){
+        finalEvenString += initialEvenValue;
     }
-    num= num-1;
+
+    initialEvenValue--;
 }
+console.log(`${finalEvenString}`);
+
 // Comparisoin
 
 /* 7. Take two value using prompt and store them in variables `num1` and `num2`. Check whether they are equal or not.
@@ -80,25 +86,11 @@ Example:
 "hello", -21; // false
 
 */
-let num1 = prompt(`Enter the first number to check weather number is equal or not :`);
-if (num1 ==undefined){
-    alert(`Enter a valid input `);
+let num1 = +prompt(`Enter the first number to check weather number is equal or not :`);
+let num2 = +prompt(`Enter the second number to check weather number is equal or not :`);
+if(isNaN(num1) || isNaN(num2 )){
+    alert("Enter a valid input ");
 }
-if( num1==true) {
-    alert(`Enter  a valid  input `);
+else {
+    alert(num1 === num2);
 }
-let num2 = prompt(`Enter the second number to check weather number is equal or not :`);
-if (num2 ==undefined){
-    alert(`Enter a valid input `);
-}
-if( num2==true) {
-    alert(`Enter  a valid  input `);
-}
-
-if(num1===num2){
-    alert(true);
-}
-else{
-    alert(false);
-}
-
