@@ -15,4 +15,5 @@ var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
 
+let completePhone = PHONE_PRICE+ACCESSORY_PRICE+TAX_RATE;
 // ⛑ Answer of the above will `$334.76`.
